@@ -1,70 +1,119 @@
-<template>
-   <input type="text" v-model="input" placeholder="Search fruits..." />
-  <div class="item fruit" v-for="fruit in filteredList()" :key="fruit">
-    <p>{{ fruit }}</p>
-  </div>
-  <div class="item error" v-if="input&&!filteredList().length">
-     <p>No results found!</p>
-  </div>
-</template>
-
 <script setup>
-import { ref } from "vue";
-let input = ref("");
-const fruits = ["apple", "banana", "orange"];
-function filteredList() {
-  return fruits.filter((fruit) =>
-    fruit.toLowerCase().includes(input.value.toLowerCase())
-  );
-}
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
+<template>
+  <header>
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="150" height="150" />
+
+    <div class="wrapper">
+      <HelloWorld msg="UNIQUERY" />
+
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+    </div>
+  </header>
+
+  <RouterView />
+</template>
+
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import '@/assets/base.css';
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
 }
 
-body {
-  padding: 20px;
-  min-height: 100vh;
-  background-color: rgb(234, 242, 255);
+header {
+  line-height: 1.5;
+  max-height: 100vh;
 }
 
-input {
+.logo {
   display: block;
-  width: 350px;
-  margin: 20px auto;
-  padding: 10px 45px;
-  background: white url("assets/search-icon.svg") no-repeat 15px center;
-  background-size: 15px 15px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin: 0 auto 2rem;
 }
 
-.item {
-  width: 350px;
-  margin: 0 auto 10px auto;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+a,
+.green {
+  text-decoration: none;
+  color: rgb(219, 199, 237);
+  transition: 0.4s;
 }
 
-.fruit {
-  background-color: rgb(97, 62, 252);
-  cursor: pointer;
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
 }
 
-.error {
-  background-color: tomato;
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 }
 </style>
