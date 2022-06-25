@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import WelcomeItem from './WelcomeItem.vue'
+import { ref } from "vue";
+let input = ref("");
+const fruits = ["rainbow", "sparkle", "ember"];
+function filteredList() {
+  return fruits.filter((fruit) =>
+    fruit.toLowerCase().includes(input.value.toLowerCase())
+  );
+}
 </script>
 
 <template>
@@ -12,6 +20,18 @@ import WelcomeItem from './WelcomeItem.vue'
     Vue’s
     <a target="_blank" href="https://vuejs.org/">official documentation</a>
     provides you with all information you need to get started.
+
+    <br />
+    <br />
+    
+    <input type="text" v-model="input" placeholder="Search unicorns..." />
+      <div class="item fruit" v-for="fruit in filteredList()" :key="fruit">
+        <p>{{ fruit }}</p>
+      </div>
+
+      <div class="item error" v-if="input&&!filteredList().length">
+        <p>No results found!</p>
+      </div>
   </WelcomeItem>
 
   <WelcomeItem>
