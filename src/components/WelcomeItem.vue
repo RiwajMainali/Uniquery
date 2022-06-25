@@ -13,6 +13,7 @@
 </template>
 
 <style scoped>
+
 .item {
   margin-top: 2rem;
   display: flex;
@@ -27,8 +28,8 @@ i {
   display: flex;
   place-items: center;
   place-content: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
 
   color: var(--color-text);
 }
