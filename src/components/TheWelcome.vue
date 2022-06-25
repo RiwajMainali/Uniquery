@@ -17,8 +17,7 @@ import TheSearchBar from './TheSearchBar.vue'
     <br />
     <br />
 
-    <TheSearchBar>
-    </TheSearchBar>
+    <TheSearchBar />
   </WelcomeItem>
 
   <WelcomeItem>
