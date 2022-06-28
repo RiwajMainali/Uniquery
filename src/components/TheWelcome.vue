@@ -6,7 +6,7 @@ import TheSearchBar from './TheSearchBar.vue'
 <template>
   <WelcomeItem>
     <template #icon>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="50" height="50" />
+      <img alt="Vue logo" class="logo" src="@/assets/images/uniquery-favicon.png" width="50" height="50" />
     </template>
     <template #heading>Documentation</template>
 
@@ -23,7 +23,7 @@ import TheSearchBar from './TheSearchBar.vue'
 
   <WelcomeItem>
     <template #icon>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="50" height="50" />
+      <img alt="Vue logo" class="logo" src="@/assets/images/uniquery-favicon.png" width="50" height="50" />
     </template>
     <template #heading>Tooling</template>
 
