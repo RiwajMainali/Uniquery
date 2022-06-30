@@ -5,7 +5,7 @@ import TheGreetings from '@/components/TheGreetings.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="150" height="150" />
+    <img alt="Vue logo" class="logo" src="@/assets/images/uniquery-favicon.png" width="150" height="150" />
 
     <div class="wrapper">
       <TheGreetings msg="UNIQUERY" />
