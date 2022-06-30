@@ -10,6 +10,29 @@
       <slot></slot>
     </div>
   </div>
+
+  <!--
+HOW TO USE THE ABOVE:
+
+<script setup lang="ts">
+  import WelcomeItem from '@/components/WelcomeItem.vue'
+</script>
+
+<template>
+  <WelcomeItem>
+    <template #icon>
+      <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="50" height="50" />
+    </template>
+
+    <template #heading>Documentation</template>
+    Vue’s
+    <a target="_blank" href="https://vuejs.org/">official documentation</a>
+    provides you with all information you need to get started.
+  </WelcomeItem>
+</template>
+
+  -->
+
 </template>
 
 <style scoped>
