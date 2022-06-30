@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import WelcomeItem from './WelcomeItem.vue'
-import TheSearchBar from './TheSearchBar.vue'
 </script>
 
 <template>
@@ -16,8 +15,6 @@ import TheSearchBar from './TheSearchBar.vue'
     
     <br />
     <br />
-
-    <TheSearchBar />
   </WelcomeItem>
 
   <WelcomeItem>
