@@ -1,3 +1,21 @@
+<script setup>
+import { ref } from "vue";
+//import firebase from "@/./firebaseInit";
+//CRUD methods?
+//const db = firebase.firestore();
+
+
+
+
+let input = ref("");
+const unicorns = ["ember", "sparkle", "rainbow"];
+function filteredList() {
+  return unicorns.filter((unicorn) =>
+    unicorn.toLowerCase().includes(input.value.toLowerCase())
+  );
+}
+</script>
+
 <template>
    <input type="text" v-model="input" placeholder="Search unicorns..." />
   <div class="item unicorn" v-for="unicorn in filteredList()" :key="unicorn">
@@ -7,17 +25,6 @@
      <p>No results found!</p>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-let input = ref("");
-const unicorns = ["ember", "sparkle", "rainbow"];
-function filteredList() {
-  return unicorns.filter((unicorn) =>
-    unicorn.toLowerCase().includes(input.value.toLowerCase())
-  );
-}
-</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
