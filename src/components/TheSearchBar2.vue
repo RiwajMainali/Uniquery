@@ -4,12 +4,12 @@ import SearchInput from 'vue-search-input'
 //Optionally import default styling
 import 'vue-search-input/dist/styles.css'
 import { v4 as uuidv4 } from 'uuid' //generate random ID
-//import { collection, getDocs } from 'firebase/firestore'
-//import { db } from '@/firebase'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '@/firebase'
 
 const search = ref([])
 const unicorns = ref([])
-/*
+
 //get unicorns, asyncronous due to await
 onMounted(async () => {
 	const querySnapshot = await getDocs(collection(db, "unicorns"))
@@ -29,7 +29,7 @@ onMounted(async () => {
 	})
 	unicorns.value = holder
 })
-*/
+
 
 const addNew = ref('')
 const addUnicorn = () => {
