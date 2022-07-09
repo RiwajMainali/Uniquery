@@ -1,12 +1,5 @@
 <script setup>
 import { ref } from "vue";
-//import firebase from "@/./firebaseInit";
-//CRUD methods?
-//const db = firebase.firestore();
-
-
-
-
 let input = ref("");
 const unicorns = ["ember", "sparkle", "rainbow"];
 function filteredList() {
@@ -17,13 +10,13 @@ function filteredList() {
 </script>
 
 <template>
-   <input type="text" v-model="input" placeholder="Search unicorns..." />
-  <div class="item unicorn" v-for="unicorn in filteredList()" :key="unicorn">
-    <p>{{ unicorn }}</p>
-  </div>
-  <div class="item error" v-if="input&&!filteredList().length">
-     <p>No results found!</p>
-  </div>
+<input type="text" v-model="input" placeholder="Search unicorns..." />
+<div class="item unicorn" v-for="unicorn in filteredList()" :key="unicorn">
+  <p>{{ unicorn }}</p>
+</div>
+<div class="item error" v-if="input&&!filteredList().length">
+  <p>No results found!</p>
+</div>
 </template>
 
 <style>
@@ -68,7 +61,7 @@ input {
 }
 
 .unicorn {
-  background-color: rgb(97, 62, 252);
+  background-color: rgb(160, 62, 252);
   cursor: pointer;
 }
 
