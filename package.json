@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tensorflow/tfjs-node": "^3.18.0",
+    "axios": "^0.27.2",
     "bulma": "^0.9.4",
     "core-js": "^3.23.3",
     "firebase": "^9.8.4",
