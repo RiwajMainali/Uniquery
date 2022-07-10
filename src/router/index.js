@@ -1,6 +1,6 @@
 //routers
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../pages/HomeView.vue'
 
 //cloud firestore
 import { initializeApp } from 'firebase/app';
@@ -17,9 +17,13 @@ const router = createRouter({
       component: HomeView
     },
     {
+        path: '/home',
+        redirect: '/'
+    },
+    {
       path: '/results',
       name: 'results',
-      component: () => import('../views/ResultsView.vue')
+      component: () => import('../pages/ResultsView.vue')
     },
     {
       path: '/about',
@@ -27,7 +31,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../pages/AboutView.vue')
     }
   ]
 })
