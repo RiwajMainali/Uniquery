@@ -3,58 +3,70 @@ import { ref, onMounted } from 'vue'
 import SearchInput from 'vue-search-input'
 //Optionally import default styling
 import 'vue-search-input/dist/styles.css'
-import { v4 as uuidv4 } from 'uuid' //generate random ID
-import { collection, getDocs } from 'firebase/firestore'
+//import { v4 as uuidv4 } from 'uuid' //generate random ID
+import { collection, onSnapshot, doc, addDoc, deleteDoc, updateDoc } from 'firebase/firestore'
 import { db } from '@/firebase'
 
 const search = ref([])
 const unicorns = ref([])
+const unicorn_collection_reference = collection(db, 'unicorns')
 
-//get unicorns, asyncronous due to await
-onMounted(async () => {
-	const querySnapshot = await getDocs(collection(db, "unicorns"))
-	//local array to store unicorn objects
-	let holder = []
-	querySnapshot.forEach((doc) => {
-  		// doc.data() is never undefined for query doc snapshots
-  		console.log(doc.id, " => ", doc.data())
-		const unicorn = {
-			id: doc.data().id,
-			URL: doc.data().URL,
-			culture: doc.data().culture,
-			done: doc.data().done,
-			title: doc.data().title
-		}
-		holder.push(unicorn) //holder array populated by unicorns
+onMounted(() => {
+	//access documents in real time, keeps on listening 
+	onSnapshot(unicorn_collection_reference, (querySnapshot) => {
+		const holder = []
+		querySnapshot.forEach((doc) => {
+			const unicorn = {
+	 		id: doc.id,
+	 		URL: doc.data().URL,
+	 		culture: doc.data().culture,
+	 		done: doc.data().done,
+	 		title: doc.data().title
+	 		}
+	 		holder.push(unicorn) //holder array populated by unicorns
+		})
+		unicorns.value = holder
 	})
-	unicorns.value = holder
 })
-
 
 const addNew = ref('')
 const addUnicorn = () => {
-	const newUnicorn = {
-		id: uuidv4(),
-		URL: 'checheche',
-		culture: 'tetetete',
-		done: false,
-		title: addNew.value
-	}
-	unicorns.value.unshift(newUnicorn)
+	// const newUnicorn = {
+	// 	id: uuidv4(),
+	// 	URL: 'none',
+	// 	culture: 'none',
+	// 	done: false,
+	// 	title: addNew.value
+	// }
+	// unicorns.value.unshift(newUnicorn)
+	
+	addDoc(unicorn_collection_reference, {
+		URL: 'none',
+	 	culture: 'none',
+	 	done: false,
+	 	title: addNew.value
+	});
 	addNew.value = ''
 }
 const deleteUnicorn = id => {
 	//.filter() to loop through unicorn array
 	//grab all unicorns that don't have the id
-	unicorns.value = unicorns.value.filter(searching => searching.id !== id)
+	//unicorns.value = unicorns.value.filter(searching => searching.id !== id)
+
+	deleteDoc(doc(unicorn_collection_reference, id))
 }
 const toggleDone = id => {
 	//find the position of unicorn in array with id
 	//use position/index to update the correct unicorn
 	const index = unicorns.value.findIndex(searching => searching.id == id)
-	unicorns.value[index].done = !unicorns.value[index].done
+	// Set the "capital" field of the city 'DC'
+	updateDoc(doc(unicorn_collection_reference, id), {
+		done: !unicorns.value[index].done
+	})
 }
 </script>
+
+
 
 <template>
 <SearchInput v-model="search" placeholder="Search unicorns..." />
@@ -135,8 +147,9 @@ const toggleDone = id => {
 		</div>
 	</div>
 </div>
-
 </template>
+
+
 
 <style>
 @import 'bulma/css/bulma.css';
