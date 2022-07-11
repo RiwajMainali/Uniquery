@@ -3,33 +3,44 @@ import { RouterLink, RouterView } from 'vue-router'
 import TheGreetings from '@/components/TheGreetings.vue'
 </script>
 
+<script type="text/javascript">
+import naviBar from '@/components/NavigationBar.vue'
+import Uniquery from '@/components/Uniquery.vue'
+
+export default {
+    components: {
+        naviBar,
+        Uniquery,
+    },
+}
+</script>
+
+
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="150" height="150" />
+    <header>
+        <Uniquery />
 
-    <div class="wrapper">
-      <TheGreetings msg="UNIQUERY" />
+        <div class="wrapper">
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
+            <TheGreetings />
 
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+            <naviBar />
+        </div>
+    </header>
 
-  <RouterView />
+    <RouterView />
 </template>
 
 <style>
 @import '@/assets/base.css';
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import '@/index.css';
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: bookish, serif;
 }
 
 #app {

@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*body {
+    color: black; 
+    background: linear-gradient(to bottom, from-kewpie, to-lavender-dust);
+    background-size: 400% 400%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}*/
+
+@font-face {
+    font-family: 'Commissioner';
+    src: url("./assets/fonts/Commissioner-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url("./assets/fonts/IBMPlexMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Nightjump';
+    src: url("./assets/fonts/NIGHTJUMP.ttf")
+}
+
+@font-face {
+    font-family: 'Bookish';
+    src: url("./assets/fonts/bookish-off-white-regular.ttf")
+}

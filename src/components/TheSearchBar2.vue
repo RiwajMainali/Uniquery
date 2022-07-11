@@ -70,13 +70,11 @@ const toggleDone = id => {
 
 <template>
 <SearchInput v-model="search" placeholder="Search unicorns..." />
-<br />
-<br />
+
+<br /><br />
 <input class="input is-medium" type="text" placeholder="Medium input">
-<br />
-<br />
-<br />
-<br />
+<br /><br /><br /><br />
+
 <div class="tutorial">
 	<!--bulma title -->
 	<div class="title has-class-center">

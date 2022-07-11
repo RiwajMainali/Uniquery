@@ -34,7 +34,7 @@ input {
   width: 350px;
   margin: 20px auto;
   padding: 10px 45px;
-  background: white url("assets/search-icon.svg") no-repeat 15px center;
+  background: white url("../assets/images/magnifying-glass.png") no-repeat 1px center;
   background-size: 15px 15px;
   font-size: 16px;
   border: none;
