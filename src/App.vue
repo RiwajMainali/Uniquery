@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import TheGreetings from '@/components/TheGreetings.vue'
+import UniquerySubtext from '@/components/UniquerySubtext.vue'
 </script>
 
 <script type="text/javascript">
@@ -9,8 +9,8 @@ import Uniquery from '@/components/Uniquery.vue'
 
 export default {
     components: {
-        naviBar,
         Uniquery,
+        naviBar,
     },
 }
 </script>
@@ -22,7 +22,7 @@ export default {
 
         <div class="wrapper">
 
-            <TheGreetings />
+            <UniquerySubtext />
 
             <naviBar />
         </div>

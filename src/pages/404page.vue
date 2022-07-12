@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "PageNotFound",
+    name: "404",
 };
 </script>
 
@@ -13,7 +13,7 @@ export default {
 <style>
 h1 {
     font-family: nightjump;
-    font-size: 50px;
+    font-size: 100px;
     color: black;
     text-align: center;
 }

@@ -69,10 +69,10 @@ const toggleDone = id => {
 
 
 <template>
-<SearchInput v-model="search" placeholder="Search unicorns..." v-on:keyup.enter="this.$router.push('/404')"/>
+<SearchInput v-model="search" placeholder="Search unicorns..." v-on:keyup.enter="this.$router.push({ path: '/404' })" />
 
 <br /><br />
-<input class="input is-medium" type="text" placeholder="Medium input" v-on:keyup.enter="this.$router.push('/404')">
+<input class="input is-medium" type="text" placeholder="Medium input" v-on:keyup.enter="this.$router.push({ path: '/404' })">
 <br /><br /><br /><br />
 
 <div class="tutorial">

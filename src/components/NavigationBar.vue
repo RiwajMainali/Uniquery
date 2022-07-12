@@ -1,5 +1,5 @@
 <script>
-
+//navigation bar component
 export default{
     name: "naviBar",
 };
