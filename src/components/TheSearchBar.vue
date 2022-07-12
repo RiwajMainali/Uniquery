@@ -6,6 +6,10 @@ import 'vue-search-input/dist/styles.css'
 //import { v4 as uuidv4 } from 'uuid' //generate random ID
 import { collection, onSnapshot, doc, addDoc, deleteDoc, updateDoc } from 'firebase/firestore'
 import { db } from '@/firebase'
+//import router
+import { useRouter } from 'vue-router'
+
+const router = useRouter();
 
 const search = ref([])
 const unicorns = ref([])
@@ -69,10 +73,10 @@ const toggleDone = id => {
 
 
 <template>
-<SearchInput v-model="search" placeholder="Search unicorns..." v-on:keyup.enter="this.$router.push({ path: '/404' })" />
+<SearchInput v-model="search" placeholder="Search unicorns..." v-on:keyup.enter="this.$router.push({ name: '404' })" />
 
 <br /><br />
-<input class="input is-medium" type="text" placeholder="Medium input" v-on:keyup.enter="this.$router.push({ path: '/404' })">
+<input class="input is-medium" type="text" placeholder="Medium input" v-on:keyup.enter="this.$router.push({ name: '404' })">
 <br /><br /><br /><br />
 
 <div class="tutorial">

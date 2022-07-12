@@ -1,9 +1,3 @@
-<script>
-export default {
-    name: "404",
-};
-</script>
-
 <template>
     <div class="404">
         <h1>404: page not found</h1>
