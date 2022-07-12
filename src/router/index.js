@@ -23,7 +23,7 @@ const router = createRouter({
     {
       path: '/results',
       name: 'results',
-      component: () => import('../pages/ResultsView.vue')
+      component: () => import('../pages/SearchResults.vue')
     },
     {
       path: '/about',
@@ -36,7 +36,7 @@ const router = createRouter({
     {
         path: '/404',
         name: '404',
-        component: () => import('../pages/PageNotFound.vue')
+        component: () => import('../pages/404page.vue')
     }
   ]
 })

@@ -1,9 +1,3 @@
-<script>
-export default {
-    name: "PageNotFound",
-};
-</script>
-
 <template>
     <div class="404">
         <h1>404: page not found</h1>
@@ -13,7 +7,7 @@ export default {
 <style>
 h1 {
     font-family: nightjump;
-    font-size: 50px;
+    font-size: 100px;
     color: black;
     text-align: center;
 }

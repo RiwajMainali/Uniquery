@@ -24,7 +24,7 @@ const router = createRouter({
     {
         path: '/results',
         name: 'results',
-        component: () => import('../pages/ResultsView.vue')
+        component: () => import('../pages/SearchResults.vue')
     }
   ]
 })
