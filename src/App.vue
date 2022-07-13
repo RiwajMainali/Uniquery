@@ -17,12 +17,14 @@ export default {
 
 
 <template>
+    
     <header>
+        <naviBar />
         <Uniquery />
-        
         <div class="wrapper">
 
             <UniquerySubtext />
+
             
         </div>
     </header>

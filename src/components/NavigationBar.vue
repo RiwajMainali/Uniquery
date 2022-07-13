@@ -7,7 +7,7 @@ export default{
 </script>
 
 <template>
-    <header>
+
         <div>
             <nav>
                 
@@ -17,5 +17,5 @@ export default{
                 
             </nav>
         </div>
-    </header>
+
 </template>

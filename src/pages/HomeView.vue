@@ -6,7 +6,6 @@ import DarkMode from '@/components/DarkMode.vue'
 
 <template>
     <main>
-        <naviBar />
         <br /><br />
         <TheSearchBar />
         <br /><br />
