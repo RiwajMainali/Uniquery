@@ -42,6 +42,9 @@ export default {
   box-sizing: border-box;
   font-family: bookish, serif;
 }
+html.dark{
+    color-scheme: dark;
+}
 
 #app {
   max-width: 1280px;
