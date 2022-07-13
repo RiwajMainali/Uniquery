@@ -10,5 +10,5 @@ const toggleDark = useToggle(isDark)
 <button
 @click="toggleDark()"
 class="px-4 py-2 text-white bg-green-500 rounded dark:bg-purple-500">
-Toogle Dark Mode </button>
+Toggle Dark Mode </button>
 </template>

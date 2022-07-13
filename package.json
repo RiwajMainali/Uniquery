@@ -19,7 +19,8 @@
     "vue": "^3.2.37",
     "vue-router": "^4.0.16",
     "vue-search-input": "^1.1.7",
-    "vuefire": "^2.2.5"
+    "vuefire": "^2.2.5",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^16.11.41",
