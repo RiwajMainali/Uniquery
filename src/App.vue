@@ -19,12 +19,11 @@ export default {
 <template>
     <header>
         <Uniquery />
-
+        
         <div class="wrapper">
 
             <UniquerySubtext />
-
-            <naviBar />
+            
         </div>
     </header>
 
@@ -70,7 +69,7 @@ a,
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: hsla(263, 71%, 66%, 0.583);
   }
 }
 

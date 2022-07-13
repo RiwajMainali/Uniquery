@@ -16,11 +16,11 @@
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
-  },
-  "emulators": {
+  }
+  /*"emulators": {
     "hosting": {
         "host": "localhost",
         "port": "5454"
     }
-  }
+  }*/
 }

@@ -25,6 +25,16 @@ const router = createRouter({
         path: '/results',
         name: 'results',
         component: () => import('../pages/SearchResults.vue')
+    },
+    {
+        path: '/404',
+        name: '404',
+        component: () => import('../pages/404page.vue')
+    },
+    {
+        path: '/test',
+        name: 'test',
+        component: () => import('../pages/TestPage.vue')
     }
   ]
 })
