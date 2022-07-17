@@ -6,6 +6,7 @@ import UniquerySubtext from '@/components/UniquerySubtext.vue'
 <script type="text/javascript">
 import naviBar from '@/components/NavigationBar.vue'
 import Uniquery from '@/components/Uniquery.vue'
+import DarkMode from '@/components/DarkMode.vue'
 
 export default {
     components: {
@@ -24,8 +25,8 @@ export default {
         <div class="wrapper">
 
             <UniquerySubtext />
-
-            
+            <DarkMode />
+        
         </div>
     </header>
 

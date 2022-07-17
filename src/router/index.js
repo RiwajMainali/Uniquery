@@ -2,24 +2,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../pages/HomeView.vue'
 import AboutView from '../pages/AboutView.vue'
-import SearchReults from '../pages/SearchResults.vue'
+import SearchResults from '../pages/SearchResults.vue'
+import TestPage from '../pages/TestPage.vue'
 
 //cloud firestore
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from "firebase/firestore";
 
 
-/*const routes = [
+const routes = [
     { path: '/', name: 'home', component: HomeView },
     { path: '/home', redirect: '/'},
     { path: '/about', name: 'about', component: AboutView },
-    { path: '/searchresults', name: 'results', component: SearchReults },
-    { path: '/404', name: '404', component: () => import('../pages/404page.vue')}
+    { path: '/searchresults', name: 'results', component: SearchResults },
+    { path: '/404', name: '404', component: () => import('../pages/404page.vue')},
+    { path: '/test', name: 'test', component: TestPage },
 
-];*/
+];
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+  routes/*: [
     {
       path: '/',
       name: 'home',
@@ -52,9 +55,10 @@ const router = createRouter({
         name: 'test',
         component: () => import('../pages/TestPage.vue')
     }
-  ]
-})
-export default router
+  ]*/,
+});
+
+export default router;
 
 
 //Uniquery firebase configuration

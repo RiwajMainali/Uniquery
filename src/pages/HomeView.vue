@@ -9,6 +9,5 @@ import DarkMode from '@/components/DarkMode.vue'
         <br /><br />
         <TheSearchBar />
         <br /><br />
-        <DarkMode />
     </main>
 </template>
