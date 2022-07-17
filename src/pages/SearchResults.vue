@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: "searchresults",
+    name: "results",
 };
 
 </script>
@@ -17,5 +17,6 @@ export default {
       <a target="_blank" href="https://en.wikipedia.org/wiki/Unicorn">unicorns...</a>
       <br />
     </h2>
+    results for (enter query here)...
   </div>
 </template>
