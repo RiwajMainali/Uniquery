@@ -1,5 +1,6 @@
 <script>
 //navigation bar component
+import { RouterView } from 'vue-router';
 export default{
     name: "naviBar",
 };
@@ -17,4 +18,6 @@ export default{
                 
             </nav>
         </div>
+
+        
 </template>

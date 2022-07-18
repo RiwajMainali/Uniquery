@@ -8,6 +8,7 @@ import naviBar from '@/components/NavigationBar.vue'
 import Uniquery from '@/components/Uniquery.vue'
 import DarkMode from '@/components/DarkMode.vue'
 
+
 export default {
     components: {
         Uniquery,
@@ -18,7 +19,6 @@ export default {
 
 
 <template>
-    
     <header>
         <naviBar />
         <Uniquery />
@@ -27,9 +27,10 @@ export default {
             <UniquerySubtext />
             <DarkMode />
         
+            
         </div>
+        
     </header>
-
     <RouterView />
 </template>
 
