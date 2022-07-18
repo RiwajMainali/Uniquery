@@ -1,15 +1,17 @@
 // Get Dependencies //
-axios = require('axios');
+import axios from "axios";
+
 
 // TEST INPUT //
-const readline = require('readline').createInterface({
+/*
+const readline = bundle.readline.createInterface({  
   input: process.stdin,
   output: process.stdout
 });
-  
+
 readline.question('Enter search query : ', input => {
 
-  promise = axios.get('https://www.google.com/search?q=$' + input);
+promise = axios.get('https://www.google.com/search?q=$' + input);
 
   promise.then(function(response){
     htmlSource = response.data
@@ -18,21 +20,24 @@ readline.question('Enter search query : ', input => {
 
   readline.close();
 });
+*/
 // REMOVE ON RELEASE //
 
-function scrapeEngine(engine, input, customFilter) {
-    promise = axios.get('https://www.google.com/search?q=$' + input);
+export function ScrapeEngine(input) {
+    promise = axios.get('https://www.google.com/search?q=$' + input, {
+      headers:{}
+  });
+
 
     promise.then(function(response){
       htmlSource = response.data
-      linksFromHtml(htmlSource);
     });
 
-    return linksFromHtml(htmlString);
+    return LinksFromHtml(htmlSource);
 }
 
 // This function will return a table of strings that contain URLs found by a search. //
-function linksFromHtml(htmlString, customFilter) {
+export function LinksFromHtml(htmlString) {
 
   // Regex Configuration //
   LINK_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
