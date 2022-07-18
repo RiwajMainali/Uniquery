@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TheSearchBar from '@/components/TheSearchBar.vue'
-//import Tensorflow from '@/components/Tensorflow.vue'
+import Tensorflow from '@/components/Tensorflow.vue'
 </script>
 
 <template>
@@ -8,5 +8,6 @@ import TheSearchBar from '@/components/TheSearchBar.vue'
         <br /><br />
         <TheSearchBar />
         <br /><br />
+        <Tensorflow />
     </main>
 </template>
