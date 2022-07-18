@@ -503,7 +503,12 @@
   "resolved" "https://registry.npmjs.org/@protobufjs/utf8/-/utf8-1.1.0.tgz"
   "version" "1.1.0"
 
-"@tensorflow/tfjs-backend-cpu@3.18.0":
+"@tensorflow-models/coco-ssd@^2.2.2":
+  "integrity" "sha512-Jey2JscmKEValcFZH2ZLz14s8KPRmVtfJ0d0M3dPhvBp9dJiGNanVXr/pJAY5OS7emKj9uSciGhdkHWXY9Hovw=="
+  "resolved" "https://registry.npmjs.org/@tensorflow-models/coco-ssd/-/coco-ssd-2.2.2.tgz"
+  "version" "2.2.2"
+
+"@tensorflow/tfjs-backend-cpu@^3.18.0", "@tensorflow/tfjs-backend-cpu@3.18.0":
   "integrity" "sha512-LcSqlylzGtpgngcMFIL3q9Q3eVaPRJ7ITZt7ivhzkCj4R5ZsnPa9qM3DCVihkQ77heAwSw4hPTo2jp5C4mJ4Cg=="
   "resolved" "https://registry.npmjs.org/@tensorflow/tfjs-backend-cpu/-/tfjs-backend-cpu-3.18.0.tgz"
   "version" "3.18.0"
@@ -511,7 +516,7 @@
     "@types/seedrandom" "2.4.27"
     "seedrandom" "2.4.3"
 
-"@tensorflow/tfjs-backend-webgl@3.18.0":
+"@tensorflow/tfjs-backend-webgl@^3.18.0", "@tensorflow/tfjs-backend-webgl@3.18.0":
   "integrity" "sha512-3NknSzS1oX2BEBOrpjPMZl823S12RgshQthmIbG6QADHb4bCJA8aM4UjWpw+3bNQnRKbRDQdFbuvj10Un79s2A=="
   "resolved" "https://registry.npmjs.org/@tensorflow/tfjs-backend-webgl/-/tfjs-backend-webgl-3.18.0.tgz"
   "version" "3.18.0"
@@ -523,12 +528,12 @@
     "@types/webgl2" "0.0.6"
     "seedrandom" "2.4.3"
 
-"@tensorflow/tfjs-converter@3.18.0":
+"@tensorflow/tfjs-converter@^3.18.0", "@tensorflow/tfjs-converter@^3.3.0", "@tensorflow/tfjs-converter@3.18.0":
   "integrity" "sha512-hpChA+zVNQOVwRnCfqDb1WI9jbEAKA6DuEm4m75Zb3dIlE6VVooDmAaHBhlc++z2q2G1sBzF9A4Bv48SUpN6vA=="
   "resolved" "https://registry.npmjs.org/@tensorflow/tfjs-converter/-/tfjs-converter-3.18.0.tgz"
   "version" "3.18.0"
 
-"@tensorflow/tfjs-core@3.18.0":
+"@tensorflow/tfjs-core@^3.18.0", "@tensorflow/tfjs-core@^3.3.0", "@tensorflow/tfjs-core@3.18.0":
   "integrity" "sha512-gMxisZozqsr5sCKlphF/eVBLg91MjlBiN60tjX8hJAu0WlSn6Gi5k65GNIL+Pq6hrxpvImcfdCmTH/2XJVZ0Mg=="
   "resolved" "https://registry.npmjs.org/@tensorflow/tfjs-core/-/tfjs-core-3.18.0.tgz"
   "version" "3.18.0"
@@ -569,7 +574,7 @@
     "rimraf" "^2.6.2"
     "tar" "^4.4.6"
 
-"@tensorflow/tfjs@3.18.0":
+"@tensorflow/tfjs@^3.18.0", "@tensorflow/tfjs@3.18.0":
   "integrity" "sha512-mOzz4jJdgIpqFS7EHndVuxrQnLUDVIKGyTqOPTYps89fZwcOFfTVxi4BHemDNQpqlVE8IaGh9UUxVXpjgPY5+Q=="
   "resolved" "https://registry.npmjs.org/@tensorflow/tfjs/-/tfjs-3.18.0.tgz"
   "version" "3.18.0"
@@ -2239,6 +2244,11 @@
   "integrity" "sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q=="
   "resolved" "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz"
   "version" "2.1.1"
+
+"requirejs@^2.3.6":
+  "integrity" "sha512-ipEzlWQe6RK3jkzikgCupiTbTvm4S0/CAU5GlgptkN5SO6F3u0UD0K18wy6ErDqiCyP4J4YYe1HuAShvsxePLg=="
+  "resolved" "https://registry.npmjs.org/requirejs/-/requirejs-2.3.6.tgz"
+  "version" "2.3.6"
 
 "resolve@^1.1.7", "resolve@^1.10.0", "resolve@^1.22.0", "resolve@^1.22.1":
   "integrity" "sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw=="

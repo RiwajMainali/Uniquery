@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import TheSearchBar from '@/components/TheSearchBar.vue'
-import naviBar from '@/components/NavigationBar.vue'
-import DarkMode from '@/components/DarkMode.vue'
+//import Tensorflow from '@/components/Tensorflow.vue'
 </script>
 
 <template>
