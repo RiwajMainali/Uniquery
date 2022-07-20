@@ -12,6 +12,7 @@ import * as cors from 'cors'
 
 cors({ origin: ['http://localhost:1'],})
 
+
 export default {
     components: {
         Uniquery,
@@ -22,7 +23,6 @@ export default {
 
 
 <template>
-    
     <header>
         <naviBar />
         <Uniquery />
@@ -31,9 +31,10 @@ export default {
             <UniquerySubtext />
             <DarkMode />
         
+            
         </div>
+        
     </header>
-
     <RouterView />
 </template>
 

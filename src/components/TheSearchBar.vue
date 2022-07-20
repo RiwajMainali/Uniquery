@@ -76,10 +76,26 @@ const toggleDone = id => {
 }
 </script>
 
+<script>
+const searchVal = ref('')
+
+export default {
+    components: {
+        SearchInput
+    },
+    setup() {
+        return {
+            searchVal
+        }
+    }
+}
+</script>
+
 
 
 <template>
-<SearchInput v-model="search" placeholder="Search unicorns..." v-on:keydown.enter="this.$router.push({ name: '404' })" />
+
+<SearchInput v-model="searchVal" placeholder="Search unicorns..." v-on:keyup.enter="this.$router.push({ name: '404' })" />
 
 <br /><br />
 <input class="input is-medium" type="text" placeholder="Medium input" v-on:keydown.enter="this.$router.push({ name: '404' })">
