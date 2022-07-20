@@ -1,8 +1,12 @@
 <script>
 import { ref } from 'vue'
-//require('@tensorflow/tfjs-backend-cpu')
-//require('@tensorflow/tfjs-backend-webgl')
+import '@tensorflow/tfjs-backend-cpu'
+import '@tensorflow/tfjs-backend-webgl'
+//import {default as coco} from  '/node_modules/tensorflow-models/coco-ssd/dist/coco-ssd.js'
+//import '@tensorflow-models/coco-ssd'
 //const cocoSsd = require('@tensorflow-models/coco-ssd')
+//import { cocoSssd } from '@tensorflow-models/coco-ssd'
+import * as cocoSsd from "@tensorflow-models/coco-ssd"
 
 export default {
 	setup(){
