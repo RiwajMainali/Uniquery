@@ -1,8 +1,8 @@
 <script setup>
-import { useDark, useToggle } from '@vueuse/core'
+import * as vueuse from '@vueuse/core'
 
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
+const isDark = vueuse.useDark()
+const toggleDark = vueuse.useToggle(isDark)
 </script>
 
 <template>

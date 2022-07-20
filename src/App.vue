@@ -7,6 +7,10 @@ import UniquerySubtext from '@/components/UniquerySubtext.vue'
 import naviBar from '@/components/NavigationBar.vue'
 import Uniquery from '@/components/Uniquery.vue'
 import DarkMode from '@/components/DarkMode.vue'
+import * as axios from 'axios'
+import * as cors from 'cors'
+
+cors({ origin: ['http://localhost:1'],})
 
 export default {
     components: {
