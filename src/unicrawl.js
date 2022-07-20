@@ -1,6 +1,7 @@
 // Get Dependencies //
-import axios from "axios";
-
+import * as axios from "axios";
+//import * as promise from "es6-promise"
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 // TEST INPUT //
 /*
@@ -24,14 +25,20 @@ promise = axios.get('https://www.google.com/search?q=$' + input);
 // REMOVE ON RELEASE //
 
 export function ScrapeEngine(input) {
-    promise = axios.get('https://www.google.com/search?q=$' + input, {
-      headers:{}
-  });
+    const scrape_promise = new Promise((request) => {
+        request = axios.get('https://www.google.com/search?q=$' + input, {
+        headers:{}
+      });
+    })
 
-
-    promise.then(function(response){
+    var htmlSource = null
+    scrape_promise.then(function(response){
       htmlSource = response.data
     });
+
+    if (htmlSource == null) {
+      return 0;
+    }
 
     return LinksFromHtml(htmlSource);
 }
