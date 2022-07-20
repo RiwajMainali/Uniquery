@@ -5,7 +5,7 @@ import './index.css'
 import { globalCookiesConfig } from 'vue3-cookies'
 
 globalCookiesConfig ({
-    expireTimes: "30d",
+    expireTimes: "-1",
     path: "/",
     domain: "",
     secure: true,
