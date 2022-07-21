@@ -1,7 +1,6 @@
 // Get Dependencies //
 import axios from "axios";
 
-
 // TEST INPUT //
 /*
 const readline = bundle.readline.createInterface({  
@@ -24,14 +23,22 @@ promise = axios.get('https://www.google.com/search?q=$' + input);
 // REMOVE ON RELEASE //
 
 export function ScrapeEngine(input) {
-    promise = axios.get('https://www.google.com/search?q=$' + input, {
-      headers:{}
-  });
+  
+    const scrape_promise = new Promise(() =>{
+        axios.get('https://www.google.com/search?q=$' + input, {
+          headers:{}
+        })
+      }
+    )
 
-
-    promise.then(function(response){
+    var htmlSource = null
+    scrape_promise.then(function(response){
       htmlSource = response.data
     });
+
+    if(htmlSource == null){
+      return 0;
+    }
 
     return LinksFromHtml(htmlSource);
 }

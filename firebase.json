@@ -17,10 +17,4 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   }
-  /*"emulators": {
-    "hosting": {
-        "host": "localhost",
-        "port": "5454"
-    }
-  }*/
 }
