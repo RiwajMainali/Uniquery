@@ -37,7 +37,9 @@ export default {
         <button v-on:click="seeResults()">click to see results</button>
         <br/><br/><br/>
         
-        <input type="text" id="query" autofocus v-on:keyup.enter="getInput()">
+        <form>
+            <input type="text" id="query" autofocus v-on:keyup.enter.prevent="redirectToPage()">
+        </form>
         <p id="userQuery"></p>
     </div>
 

@@ -31,7 +31,6 @@ export default {
             <UniquerySubtext />
             <DarkMode />
         
-            
         </div>
         
     </header>
