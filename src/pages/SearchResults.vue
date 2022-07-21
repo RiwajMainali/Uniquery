@@ -1,13 +1,13 @@
 <script>
 
 export default {
-    name: "results",
+    name: "searchresults",
 };
 
 </script>
 
 <template>
-  <div class="results">
+  <div class="searchresults">
     <h1>This is the results page teehee :3 </h1>
   </div>
   
