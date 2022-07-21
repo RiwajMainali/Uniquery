@@ -112,6 +112,9 @@ nav a:first-of-type {
   body {
     display: flex;
     place-items: center;
+    background-color: #f9f7df;
+    /*background-image: linear-gradient(#dbd5ec, #f3e6e9);*/
+    background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
   }
 
   #app {
