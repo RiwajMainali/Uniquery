@@ -14,7 +14,7 @@ const routes = [
     { path: '/', name: 'home', component: HomeView },
     { path: '/home', redirect: '/'},
     { path: '/about', name: 'about', component: AboutView },
-    { path: '/search/:query', name: 'searchresults', component: SearchResults },
+    { path: '/searchresults/:query', name: 'searchresults', component: SearchResults },
     { path: '/:catchAll(.*)*', name: '404', component: () => import('../pages/404page.vue')},
     { path: '/test', name: 'test', component: TestPage },
 

@@ -9,7 +9,7 @@ export default {
             this.$router.push('/404')
         },
         seeResults() {
-            this.$router.push('/results')
+            this.$router.push('/searchresults')
         },
         testFunction() {
             window.location.assign('https://project-61dcd.web.app/searchresults')
