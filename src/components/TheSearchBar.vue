@@ -4,16 +4,13 @@ import SearchInput from 'vue-search-input'
 //Optionally import default styling
 import 'vue-search-input/dist/styles.css'
 //import { v4 as uuidv4 } from 'uuid' //generate random ID
-import { collection, onSnapshot, doc, addDoc, deleteDoc, updateDoc, LoadBundleTask } from 'firebase/firestore'
+import { collection, onSnapshot, doc, addDoc, deleteDoc, updateDoc } from 'firebase/firestore'
 import { db } from '@/firebase'
 //import router
 import { useRouter } from 'vue-router'
 
-
 //import unicrawl (TEST)
-import {ScrapeEngine} from '../unicrawl'
-
-
+import { ScrapeEngine } from '../unicrawl'
 
 const router = useRouter();
 
@@ -49,9 +46,9 @@ const addUnicorn = () => {
 	// 	title: addNew.value
 	// }
 	// unicorns.value.unshift(newUnicorn)
-
+	
 	addDoc(unicorn_collection_reference, {
-		URL: ScrapeEngine(addNew.value),
+		URL: 'none',
 	 	culture: 'none',
 	 	done: false,
 	 	title: addNew.value
@@ -76,26 +73,9 @@ const toggleDone = id => {
 }
 </script>
 
-<script>
-const searchVal = ref('')
-
-export default {
-    components: {
-        SearchInput
-    },
-    setup() {
-        return {
-            searchVal
-        }
-    }
-}
-</script>
-
-
 
 <template>
-
-<SearchInput v-model="searchVal" placeholder="Search unicorns..." v-on:keyup.enter="this.$router.push({ name: '404' })" />
+<SearchInput v-model="searchVal" placeholder="Search unicorns..." v-on:keyup.enter="window.location.assign('https://project-61dcd.web.app/404')" />
 
 <br /><br />
 <input class="input is-medium" type="text" placeholder="Medium input" v-on:keydown.enter="this.$router.push({ name: '404' })">
