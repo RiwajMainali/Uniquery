@@ -10,7 +10,7 @@ import DarkMode from '@/components/DarkMode.vue'
 import * as axios from 'axios'
 import * as cors from 'cors'
 
-cors({ origin: ['http://localhost:1'],})
+//cors({ origin: ['http://localhost:1'],})
 
 
 export default {
