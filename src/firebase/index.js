@@ -2,7 +2,10 @@
 import { initializeApp } from 'firebase/app'
 //import { getAnalytics } from 'firebase/analytics'
 import { getFirestore } from 'firebase/firestore'
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 9779500... Readding firebase functions with possible fix.
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -26,6 +29,10 @@ const app = initializeApp(firebaseConfig)
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 9779500... Readding firebase functions with possible fix.
 //export db constant to use it anywhere in app
 //to CRUD firestone database
 export { db }
