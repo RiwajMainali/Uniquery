@@ -7,6 +7,7 @@ import UniquerySubtext from '@/components/UniquerySubtext.vue'
 import naviBar from '@/components/NavigationBar.vue'
 import Uniquery from '@/components/Uniquery.vue'
 import DarkMode from '@/components/DarkMode.vue'
+import cookie from '@/components/cookie.vue'
 import * as axios from 'axios'
 import * as cors from 'cors'
 
@@ -23,6 +24,7 @@ export default {
 
 
 <template>
+    
     <header>
         <naviBar />
         <Uniquery />

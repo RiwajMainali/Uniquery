@@ -36,6 +36,13 @@ module.exports = {
                 mono: ['IBM Plex Mono'],
                 display: ['Nightjump'],
                 serif: ['Bookish'],
+            },
+            colors: {
+                'lavender-dust': '#ebe3f5',
+                'kewpie': '#f9f7df',
+                'turquoise': '#5ed1e1',
+                'lavender-soap': '#bfc2fe',
+                'emo-ballerina': '#e8bddb',
             }
         },
 

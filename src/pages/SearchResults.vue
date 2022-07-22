@@ -1,7 +1,11 @@
 <script>
+import result from '@/components/result.vue'
 
 export default {
     name: "searchresults",
+    components: {
+        result,
+    },
 };
 
 </script>
@@ -18,5 +22,18 @@ export default {
       <br />
     </h2>
     results for (enter query here)...
+
+    <result />
+
   </div>
 </template>
+
+<style>
+@media (min-width: 1024px) {
+    .searchresults {
+        min-height: 100vh;
+        /*display: flex;*/
+        align-items: center;
+    }
+}
+</style>
