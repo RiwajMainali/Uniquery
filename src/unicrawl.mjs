@@ -68,13 +68,13 @@ export function ScapeEnginesAtPage(input, page_number = 1) {
       return 0;
     }
     if(input == ''){
-      return 0;
-    }
-    if(page_number < 1){
       return -1;
     }
+    if(page_number < 1){
+      return -2;
+    }
     if(page_number > 99){
-      return -2
+      return -3
     }
 
     let results_table = []
