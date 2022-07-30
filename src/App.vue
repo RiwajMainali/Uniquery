@@ -26,9 +26,9 @@ export default {
 <template>
     
     <header>
-        <!--<naviBar />
+        <naviBar />
         <Uniquery />
-        <div class="wrapper">
+        <!--<div class="wrapper">
 
             <UniquerySubtext />
             <DarkMode />
