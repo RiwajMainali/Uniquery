@@ -1,6 +1,6 @@
 //routers
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../pages/HomeView.vue'
+import HomeView from '@/pages/HomeView.vue'
 import AboutView from '../pages/AboutView.vue'
 import SearchResults from '../pages/SearchResults.vue'
 import TestPage from '../pages/TestPage.vue'
@@ -11,12 +11,27 @@ import { getFirestore } from "firebase/firestore";
 
 
 const routes = [
-    { path: '/', name: 'home', component: HomeView },
-    { path: '/home', redirect: '/'},
-    { path: '/about', name: 'about', component: AboutView },
-    { path: '/searchresults/:query', name: 'searchresults', component: SearchResults },
-    { path: '/:catchAll(.*)*', name: '404', component: () => import('../pages/404page.vue')},
-    { path: '/test', name: 'test', component: TestPage },
+    { path: '/',
+        name: 'home', 
+        components: {
+            default: () => HomeView,
+            searchBar: () => import('../components/TheSearchBar.vue') },
+        meta: {
+            layout: HomeView }},
+    { path: '/home',
+        redirect: '/' },
+    { path: '/about',
+        name: 'about',
+        component: AboutView },
+    { path: '/searchresults/:query',
+        name: 'searchresults',
+        component: SearchResults },
+    { path: '/:catchAll(.*)*',
+        name: '404',
+        component: () => import('../pages/404page.vue') },
+    { path: '/test',
+        name: 'test',
+        component: TestPage },
 
 ];
 
