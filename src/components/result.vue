@@ -29,16 +29,7 @@ export default {
     methods: {
         redirectToURL() {
             this.$router.push('/404')
-        },
-
-        /*userQuery() 
-            computed<userQuery>(
-            options: {
-                get: () => userQuery,
-                set: (value: userQuery) => void,
-            },
-
-        ): Ref<userQuery>*/
+        }
     }, 
 
 }

@@ -80,7 +80,7 @@ export default {
 </template>
 
 <style>
-@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {
     body {
         display: grid;
         place-items: center;
@@ -88,7 +88,7 @@ export default {
         background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
     }
 
-    /*#homeview {
+    #homeview {
         display: grid;
         grid-template-columns: 0.3fr 1fr 0.3fr;
         grid-template-rows: 0.3fr 1.1fr 0.7fr 0.7fr 2.2fr;
@@ -125,8 +125,8 @@ export default {
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-area: search;
-    }*/
-}
+    }
+}*/
 /*.container {  
     display: grid;
     grid-template-columns: 0.3fr 1fr 0.3fr;

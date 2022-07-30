@@ -28,12 +28,12 @@ export default {
     <header>
         <naviBar />
         <Uniquery />
-        <!--<div class="wrapper">
+        <div class="wrapper">
 
             <UniquerySubtext />
             <DarkMode />
         
-        </div>-->
+        </div>
         
     </header>
     <RouterView />
