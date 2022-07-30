@@ -22,9 +22,9 @@ export default {
 
     <header>
         <naviBar />
-        <div class="logo">
-            <Uniquery />
-        </div>
+        
+        <Uniquery />
+        
         
         <br /><br />
         
@@ -82,7 +82,7 @@ export default {
 <style>
 @media (min-width: 1024px) {
     body {
-        display: flex;
+        display: grid;
         place-items: center;
         background-color: #f9f7df;
         background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
@@ -116,16 +116,16 @@ export default {
         grid-area: logo;
         background-image: transparent url('@/components/Uniquery.vue') no-repeat;
         background-size: contain;
-    }*/
+    }
 
-    searchBar {  
+    .searchBar {  
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-area: search;
-    }
+    }*/
 }
 /*.container {  
     display: grid;

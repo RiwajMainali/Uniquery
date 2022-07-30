@@ -1,6 +1,6 @@
 //routers
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/pages/HomeView.vue'
+import HomeView from '../pages/HomeView.vue'
 import AboutView from '../pages/AboutView.vue'
 import SearchResults from '../pages/SearchResults.vue'
 import TestPage from '../pages/TestPage.vue'
@@ -13,11 +13,7 @@ import { getFirestore } from "firebase/firestore";
 const routes = [
     { path: '/',
         name: 'home', 
-        components: {
-            default: () => HomeView,
-            searchBar: () => import('../components/TheSearchBar.vue') },
-        meta: {
-            layout: HomeView }},
+        component: HomeView},
     { path: '/home',
         redirect: '/' },
     { path: '/about',

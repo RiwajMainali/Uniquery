@@ -25,17 +25,17 @@ export default {
 
 <template>
     
-    <!--<header>
-        <naviBar />
+    <header>
+        <!--<naviBar />
         <Uniquery />
         <div class="wrapper">
 
             <UniquerySubtext />
             <DarkMode />
         
-        </div>
+        </div>-->
         
-    </header>-->
+    </header>
     <RouterView />
 </template>
 
@@ -121,7 +121,7 @@ nav a:first-of-type {
 
   #app {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
 
