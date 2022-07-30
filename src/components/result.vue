@@ -39,8 +39,7 @@ export default {
             },
 
         ): Ref<userQuery>*/
-    },
-    function 
+    }, 
 
 }
 </script>
