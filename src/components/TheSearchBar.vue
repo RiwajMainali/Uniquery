@@ -11,6 +11,7 @@ import { useRouter } from 'vue-router'
 
 //import unicrawl (TEST)
 //import { ScrapeEngine } from '../unicrawl'
+import { ScrapeEnginesAtPage } from '../unicrawl.mjs'
 
 const router = useRouter();
 
@@ -46,6 +47,7 @@ const addUnicorn = () => {
 	// 	title: addNew.value
 	// }
 	// unicorns.value.unshift(newUnicorn)
+	ScrapeEnginesAtPage(addNew.value, 1);
 	
 	addDoc(unicorn_collection_reference, {
 		URL: 'none',
