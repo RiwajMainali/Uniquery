@@ -24,15 +24,15 @@ export default {
         <naviBar />
         
         <Uniquery />
-        
+        <DarkMode />
         
         <br /><br />
         
-        <div class="wrapper">
+        <!--<div class="wrapper">
 
-            <DarkMode />
+            
     
-        </div>
+        </div>-->
         
     </header>
     <RouterView />
@@ -88,7 +88,7 @@ export default {
         background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
     }
 
-    #homeview {
+    /*#homeview {
         display: grid;
         grid-template-columns: 0.3fr 1fr 0.3fr;
         grid-template-rows: 0.3fr 1.1fr 0.7fr 0.7fr 2.2fr;
@@ -103,7 +103,7 @@ export default {
         padding: 0 2rem;
     }
     
-    /*.logo {  
+    .logo {  
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
