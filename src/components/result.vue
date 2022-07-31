@@ -4,7 +4,7 @@ import { ref, computed } from 'vue'
 export default {
     name: "result",
     props: {
-        userQuery: string
+        userQuery: String
     },
     data() {
         return {
