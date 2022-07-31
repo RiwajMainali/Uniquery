@@ -2,11 +2,12 @@
 import { isString } from "@vue/shared";
 import axios from "axios";
 import * as readline from "readline";
-import * as express from "express";
-import * as cors from "cors";
+//import * as express from "express";
+//import * as cors from "cors";
 
 
 // Test proxy //
+/*
 express.use(cors({
   origin: 'https://google.com'
 }))
@@ -14,6 +15,7 @@ express.use(cors({
 express.get('/', (req, res) => {
   res.send("CORS Solved")
 })
+*/
 
 /*
 app.use((req, res, next) => {
@@ -64,6 +66,7 @@ function GetGoogleResults(input, page_number = 1) {
   // https://www.google.com/search?q=$pizza will get page 1.
   // https://www.google.com/search?q=pizza&start=10 will get page 2, https://www.google.com/search?q=pizza&start=20 will get page 3.
 
+  /*
   const newURL = 'https://www.google.com'//'https://www.google.com/search?q=$' + input + "&start=" + (10 * (page_number - 1))
   const init = {
     method:'GET',
@@ -82,6 +85,7 @@ function GetGoogleResults(input, page_number = 1) {
   }).catch((error) => {
     console.log(error)
   })
+  */
 
   /*
   axios.get('https://www.google.com/search?q=$' + input + "&start=" + (10 * (page_number - 1)), {
