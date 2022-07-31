@@ -11,7 +11,7 @@ import cookie from '@/components/cookie.vue'
 import * as axios from 'axios'
 import * as cors from 'cors'
 
-cors({ origin: ['http://localhost:1'],})
+//cors({ origin: ['http://localhost:1'],})
 
 
 export default {
@@ -25,7 +25,7 @@ export default {
 
 <template>
     
-    <!--<header>
+    <header>
         <naviBar />
         <Uniquery />
         <div class="wrapper">
@@ -35,7 +35,7 @@ export default {
         
         </div>
         
-    </header>-->
+    </header>
     <RouterView />
 </template>
 
@@ -48,9 +48,8 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: bookish;
+  font-family: bookish, serif;
 }
-
 html.dark{
     color-scheme: dark;
 }
@@ -116,12 +115,13 @@ nav a:first-of-type {
     display: flex;
     place-items: center;
     background-color: #f9f7df;
+    /*background-image: linear-gradient(#dbd5ec, #f3e6e9);*/
     background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
   }
 
   #app {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
 
