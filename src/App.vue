@@ -6,7 +6,6 @@ import UniquerySubtext from '@/components/UniquerySubtext.vue'
 <script type="text/javascript">
 import naviBar from '@/components/NavigationBar.vue'
 import Uniquery from '@/components/Uniquery.vue'
-import DarkMode from '@/components/DarkMode.vue'
 import cookie from '@/components/cookie.vue'
 import * as axios from 'axios'
 import * as cors from 'cors'
@@ -31,7 +30,6 @@ export default {
         <div class="wrapper">
 
             <UniquerySubtext />
-            <DarkMode />
         
         </div>
         

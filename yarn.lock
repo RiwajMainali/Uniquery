@@ -963,6 +963,11 @@
     "regenerator-runtime" "^0.13.5"
     "yargs" "^16.0.3"
 
+"@types/accessibility@^3.0.1":
+  "integrity" "sha512-E/cxsIaiPepFb7/2UFKjQIPjVs73/cvsJPSE4OnnTTl2xQhxXMiIu4tmujb/seCd6ApUjsqQJL4EnXrI/pYJLw=="
+  "resolved" "https://registry.npmjs.org/@types/accessibility/-/accessibility-3.0.1.tgz"
+  "version" "3.0.1"
+
 "@types/eslint-scope@^3.7.3":
   "integrity" "sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA=="
   "resolved" "https://registry.npmjs.org/@types/eslint-scope/-/eslint-scope-3.7.4.tgz"
@@ -1362,6 +1367,11 @@
   dependencies:
     "mime-types" "~2.1.34"
     "negotiator" "0.6.3"
+
+"accessibility@^3.0.17":
+  "integrity" "sha512-rQx2I1FE4Vd4Ejzd/PvXkSFYqQ0agUa26m9iSXcDkbQUmR81J7De/EmjYCh7dfcMVKbII1fsA7weQI4yJrE5QA=="
+  "resolved" "https://registry.npmjs.org/accessibility/-/accessibility-3.0.17.tgz"
+  "version" "3.0.17"
 
 "acorn-import-assertions@^1.7.6":
   "integrity" "sha512-m7VZ3jwz4eK6A4Vtt8Ew1/mNbP24u0FhdyfA7fSvnJR6LMdfOYnmuIrrJAgrYfYJ10F/otaHTtrtrtmHdMNzEw=="
