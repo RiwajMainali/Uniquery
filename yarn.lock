@@ -1368,10 +1368,10 @@
     "mime-types" "~2.1.34"
     "negotiator" "0.6.3"
 
-"accessibility@^3.0.17":
-  "integrity" "sha512-rQx2I1FE4Vd4Ejzd/PvXkSFYqQ0agUa26m9iSXcDkbQUmR81J7De/EmjYCh7dfcMVKbII1fsA7weQI4yJrE5QA=="
-  "resolved" "https://registry.npmjs.org/accessibility/-/accessibility-3.0.17.tgz"
-  "version" "3.0.17"
+"accessibility@^4.0.0":
+  "integrity" "sha512-mrrjIxD+DXdAPH1ySg+Nm1sUzMx2kPlqhkBoF4BpoigXWoKzXZyg6q3A1F6OGe/OqIXwsf2ijziqYHAZPqFixg=="
+  "resolved" "https://registry.npmjs.org/accessibility/-/accessibility-4.0.0.tgz"
+  "version" "4.0.0"
 
 "acorn-import-assertions@^1.7.6":
   "integrity" "sha512-m7VZ3jwz4eK6A4Vtt8Ew1/mNbP24u0FhdyfA7fSvnJR6LMdfOYnmuIrrJAgrYfYJ10F/otaHTtrtrtmHdMNzEw=="

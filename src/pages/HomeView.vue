@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import TheSearchBar from '@/components/TheSearchBar.vue'
 import Tensorflow from '@/components/Tensorflow.vue'
-//import { Accessibility } from '/Users/oriana/Uniquery/node_modules/accessibility/src/main'
-import * as access from '/Users/oriana/Uniquery/node_modules/accessibility/src/main'
+import * as access from 'accessibility/dist/accessibility'
 window.addEventListener('load', function() {
     new access.Accessibility();
 }, false)
