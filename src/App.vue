@@ -8,10 +8,10 @@ import naviBar from '@/components/NavigationBar.vue'
 import Uniquery from '@/components/Uniquery.vue'
 import DarkMode from '@/components/DarkMode.vue'
 import cookie from '@/components/cookie.vue'
-import * as axios from 'axios'
-import * as cors from 'cors'
+//import * as axios from 'axios'
+//import * as cors from 'cors'
 
-cors({ origin: ['http://localhost:1'],})
+//cors({ origin: ['http://localhost:1'],})
 
 
 export default {
@@ -115,13 +115,22 @@ nav a:first-of-type {
   body {
     display: flex;
     place-items: center;
-    background-color: #f9f7df;
-    background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
+    /*background-color: #f9f7df;
+    background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);*/
   }
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr 1.1fr 0.7fr 0.7fr 2.2fr;
+    gap: 10px 5px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+        "toggle header hamburger"
+        ". logo ."
+        ". search ."
+        ". searchButton ."
+        ". footer .";
     padding: 0 2rem;
   }
 

@@ -80,7 +80,7 @@ export default {
 </template>
 
 <style>
-/*@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {*/
     body {
         display: grid;
         place-items: center;
@@ -101,7 +101,7 @@ export default {
             ". searchButton ."
             ". footer .";
         padding: 0 2rem;
-    }
+    }/*
     
     .logo {  
         display: grid;
