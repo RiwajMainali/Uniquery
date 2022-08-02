@@ -1,17 +1,11 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import UniquerySubtext from '@/components/UniquerySubtext.vue'
 </script>
 
 <script type="text/javascript">
 import naviBar from '@/components/NavigationBar.vue'
 import Uniquery from '@/components/Uniquery.vue'
-import cookie from '@/components/cookie.vue'
-import * as axios from 'axios'
-import * as cors from 'cors'
-
-//cors({ origin: ['http://localhost:1'],})
-
 
 export default {
     components: {
@@ -45,18 +39,15 @@ export default {
 * {
   padding: 0;
   margin: 0;
+  align-items: center;
   box-sizing: border-box;
   font-family: bookish, serif;
-}
-html.dark{
-    color-scheme: dark;
 }
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-
   font-weight: normal;
 }
 
