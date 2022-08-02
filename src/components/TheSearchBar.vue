@@ -8,7 +8,6 @@ import { collection, onSnapshot, doc, addDoc, deleteDoc, updateDoc } from 'fireb
 import { db } from '@/firebase'
 import { useRouter } from 'vue-router'
 import { functions } from '@/router/index.js'
-import { httpsCallable } from '@/firebase/functions'
 
 // Objects
 const router = useRouter();
@@ -35,13 +34,6 @@ onMounted(() => {
 })
 
 const addNew = ref('')
-
-const testHttp = async () => {
-	const addMessage = httpsCallable(functions, 'helloWorld');
-	const result = await helloWorld('hello');
-	const data = result.data;
-	console.log(result);
-}
 const addUnicorn = () => {
 	// const newUnicorn = {
 	// 	id: uuidv4(),
@@ -95,7 +87,7 @@ const toggleDone = id => {
 
 	<!-- submit handler & .prevent to prevent the page 
 	to be reloaded and added method addUnicorn-->
-	<form @submit.prevent="testHttp"> 
+	<form @submit.prevent="addUnicorn"> 
 		<!-- bulma form->general->is-expanded -->
 		<!-- mb-5 adds 5 to bottom margin -->
 		<div class="field is-grouped mb-5">
