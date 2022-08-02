@@ -6,11 +6,7 @@ import 'vue-search-input/dist/styles.css'
 //import { v4 as uuidv4 } from 'uuid' //generate random ID
 import { collection, onSnapshot, doc, addDoc, deleteDoc, updateDoc } from 'firebase/firestore'
 import { db } from '@/firebase'
-//import router
 import { useRouter } from 'vue-router'
-
-//import unicrawl (TEST)
-//import { ScrapeEngine } from '../unicrawl'
 
 const router = useRouter();
 
@@ -76,11 +72,12 @@ const toggleDone = id => {
 
 <template>
 <SearchInput v-model="searchVal" placeholder="Search unicorns..." v-on:keyup.enter="window.location.assign('https://project-61dcd.web.app/404')" />
-
+<br /><br />
+<!-- commenting out second sample search bar
 <br /><br />
 <input class="input is-medium" type="text" placeholder="Medium input" v-on:keydown.enter="this.$router.push({ name: '404' })">
 <br /><br /><br /><br />
-
+--->
 <div class="tutorial">
 	<!--bulma title -->
 	<div class="title has-class-center">
