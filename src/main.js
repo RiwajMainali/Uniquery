@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import './index.css'
 import { globalCookiesConfig } from 'vue3-cookies'
+import cors from 'cors'
 
 //todo: redo cookie component.
 globalCookiesConfig ({
@@ -16,6 +17,7 @@ globalCookiesConfig ({
 const app = createApp(App)
 
 app.use(router)
+app.use(cors)
 router.app = app
 
 app.mount('#app')

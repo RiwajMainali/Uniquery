@@ -7,9 +7,10 @@ import 'vue-search-input/dist/styles.css'
 import { collection, onSnapshot, doc, addDoc, deleteDoc, updateDoc } from 'firebase/firestore'
 import { db } from '@/firebase'
 import { useRouter } from 'vue-router'
+import { functions } from '@/router/index.js'
 
+// Objects
 const router = useRouter();
-
 const search = ref([])
 const unicorns = ref([])
 const unicorn_collection_reference = collection(db, 'unicorns')

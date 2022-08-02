@@ -8,7 +8,7 @@ import TestPage from '../pages/TestPage.vue'
 //cloud firestore
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from "firebase/firestore";
-
+import { getFunctions } from "firebase/functions";
 
 const routes = [
     { path: '/', name: 'home', component: HomeView },
@@ -77,5 +77,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
+// Initialize Cloud Functions
+const functions = getFunctions(app);
 
-export { db }
+export { db, functions }
