@@ -2,7 +2,6 @@
 //todo: create props and other stuff
 export default {
     name: "result",
-
     data() {
         return {
             queryResult: {
