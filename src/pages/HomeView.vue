@@ -20,24 +20,30 @@ export default {
 
 <template>
 
-    <header>
-        <naviBar />
-        
-        <Uniquery />
-        <DarkMode />
-        
-        <br /><br />
-        
-        <!--<div class="wrapper">
 
-            
     
+
+
+        <div class="container">
+            <div class="header">
+                <naviBar />
+            </div>
+            <div class="content">
+                <div class="logo">
+                    <Uniquery />
+                </div>
+                <br/><br/><br/>
+                <div class="searchbar">
+                    <searchBar />
+                </div>
+                
+            </div>
+        <!--<div class="footer">
+            A search engine refiner.
+                <UniquerySubtext />
         </div>-->
+        </div>
         
-    </header>
-    <RouterView />
-    <main>
-        <searchBar />
         <!--<br /><br />
         <TheSearchBar />
         <br /><br />
@@ -75,13 +81,78 @@ export default {
             </div>
         </div>-->
         
-    </main>
+    
     <UniquerySubtext />
+    <RouterView />
+    
+    
 </template>
 
 <style>
+body {
+    background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 2.1fr 0.3fr;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+
+
+}
+
+.header { 
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    /*grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 0px;
+    grid-template-areas: 
+        "logo logo logo"
+        "logo logo logo"
+        "searchbar searchbar searchbar"
+        "searchbutton searchbutton searchbutton";
+    grid-area: content;
+}
+
+.logo { 
+    grid-area: logo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchbar { 
+    grid-area: searchbar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchbutton { grid-area: searchbutton; }
+
+.footer {
+    grid-area: footer;
+    
+}
+
 /*@media (min-width: 1024px) {*/
-    body {
+    /*body {
         display: grid;
         place-items: center;
         background-color: #f9f7df;
@@ -101,11 +172,11 @@ export default {
             ". searchButton ."
             ". footer .";
         padding: 0 2rem;
-    }/*
+    }
     
     .logo {  
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        /*grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
@@ -114,10 +185,9 @@ export default {
             ". . ."
             ". . .";
         grid-area: logo;
-        background-image: transparent url('@/components/Uniquery.vue') no-repeat;
-        background-size: contain;
-    }
-
+        column-span: all;
+    }*/
+/*
     .searchBar {  
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -187,7 +257,7 @@ export default {
     background-image: transparent url('@/components/Uniquery.vue') no-repeat;
     background-size: contain;
 }
-
+*/
 .search {  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -216,7 +286,7 @@ export default {
     grid-area: searchButton;
 }
 
-.button { grid-area: button; }
+/*.button { grid-area: button; }
 
 .header {  
     display: grid;

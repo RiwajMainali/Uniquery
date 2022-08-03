@@ -4,6 +4,7 @@ import router from './router'
 import './index.css'
 import { globalCookiesConfig } from 'vue3-cookies'
 
+
 //todo: redo cookie component.
 globalCookiesConfig ({
     expireTimes: "-1",
