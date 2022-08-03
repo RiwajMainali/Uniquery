@@ -6,6 +6,7 @@ import UniquerySubtext from '@/components/UniquerySubtext.vue'
 <script type="text/javascript">
 import naviBar from '@/components/NavigationBar.vue'
 import Uniquery from '@/components/Uniquery.vue'
+import cookie from '@/components/cookie.vue'
 
 export default {
     components: {
@@ -18,17 +19,8 @@ export default {
 
 <template>
     
-    <header>
-        <naviBar />
-        <Uniquery />
-        <div class="wrapper">
-
-            <UniquerySubtext />
-        
-        </div>
-        
-    </header>
     <RouterView />
+    
 </template>
 
 <style>
@@ -39,27 +31,23 @@ export default {
 * {
   padding: 0;
   margin: 0;
-  align-items: center;
   box-sizing: border-box;
-  font-family: bookish, serif;
+  font-family: bookish;
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+    /*max-width: 1280px;*/
+    min-height: 100vh;
+    
+    position: relative;
+    /*margin: 0 auto;*/
+    padding: 2rem;
+
+    font-weight: normal;
+    background-color: #f9f7df;
+    background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
 }
 
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
 a,
 .green {
@@ -98,23 +86,29 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
-@media (min-width: 1024px) {
-  body {
+/*
+/*@media (min-width: 1024px) {*/
+/*  body {
     display: flex;
     place-items: center;
-    background-color: #f9f7df;
-    /*background-image: linear-gradient(#dbd5ec, #f3e6e9);*/
-    background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
   }
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr 1.1fr 0.7fr 0.7fr 2.2fr;
+    gap: 10px 5px;
+    grid-auto-flow: column;
+    grid-template-areas: 
+        "toggle header hamburger"
+        ". logo ."
+        ". search ."
+        ". searchButton ."
+        ". footer .";
     padding: 0 2rem;
   }
 
-  header {
+/*  header {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
@@ -138,5 +132,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+}*/
 </style>

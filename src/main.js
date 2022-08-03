@@ -5,6 +5,7 @@ import './index.css'
 import { globalCookiesConfig } from 'vue3-cookies'
 import cors from 'cors'
 
+
 //todo: redo cookie component.
 globalCookiesConfig ({
     expireTimes: "-1",
