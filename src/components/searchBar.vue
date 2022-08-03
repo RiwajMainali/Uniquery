@@ -44,7 +44,7 @@ input[type=text] {
 }
 
 form.nosubmit {
-    color: #f9f7df;
+    color: #555;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -52,10 +52,10 @@ form.nosubmit {
     border-radius: 24px;
 }
 input.nosubmit {
-    border: 1px solid #f9f7df;
+    border: 1px solid #555;
     display: flex;
     padding: 9px 4px 9px 40px;
-    background: white url('@/assets/images/magnifying-glass.png') no-repeat 0 -21px;
+    background: white url('@/assets/images/magnifying-glass.png') no-repeat;
     background-size: 20px;
 }
 

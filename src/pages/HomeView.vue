@@ -3,7 +3,6 @@ import TheSearchBar from '@/components/TheSearchBar.vue'
 import Tensorflow from '@/components/Tensorflow.vue'
 import naviBar from '@/components/NavigationBar.vue'
 import Uniquery from '@/components/Uniquery.vue'
-import DarkMode from '@/components/DarkMode.vue'
 import UniquerySubtext from '@/components/UniquerySubtext.vue'
 import searchBar from '@/components/searchBar.vue'
 
@@ -17,7 +16,6 @@ export default {
     components: {
         Uniquery,
         naviBar,
-        DarkMode,
         TheSearchBar,
         UniquerySubtext,
         searchBar,
