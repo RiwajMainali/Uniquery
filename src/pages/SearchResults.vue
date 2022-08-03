@@ -1,13 +1,11 @@
 <script>
-import result from '@/components/result.vue'
-
+import Results from '@/components/Results.vue'
 export default {
     name: "searchresults",
     components: {
-        result,
+        Results,
     },
 };
-
 </script>
 
 <template>
@@ -23,9 +21,9 @@ export default {
     </h2>
     results for (enter query here)...
 
-    <result />
 
   </div>
+
 </template>
 
 <style>
@@ -37,3 +35,4 @@ export default {
     }
 }
 </style>
+

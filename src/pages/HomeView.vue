@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TheSearchBar from '@/components/TheSearchBar.vue'
 import Tensorflow from '@/components/Tensorflow.vue'
+import Results from '@/components/Results.vue'
 import * as access from 'accessibility/dist/accessibility'
 window.addEventListener('load', function() {
     new access.Accessibility();
@@ -9,6 +10,8 @@ window.addEventListener('load', function() {
 
 <template>
     <main>
+        <br /><br />
+        <Results />
         <br /><br />
         <TheSearchBar />
         <br /><br />

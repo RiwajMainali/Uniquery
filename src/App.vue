@@ -39,7 +39,6 @@ export default {
 * {
   padding: 0;
   margin: 0;
-  align-items: center;
   box-sizing: border-box;
   font-family: bookish, serif;
 }

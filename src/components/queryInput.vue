@@ -1,20 +1,28 @@
 <script>
+//parent to Results.vue
+import Results from '@/components/Results.vue'
 export default {
-    name: "queryInput",
+    name: "QueryInput",
+    components: {Results}
 };
 </script>
 
 <template>
-    <div class="queryInput">
+<!-- 
+    <MyComponent kebab-case="hello" /> 
+    PascalCase for component tags
+-->
+<Results result-test="Hello from Parent :D"/>
 
-        <form>
-            <input type="text" id="query" autofocus v-on:keyup.enter.prevent="redirectToPage()">
-        </form>
+<div class="queryInput">
+
+    <form>
+       <input type="text" id="query" autofocus v-on:keyup.enter.prevent="redirectToPage()">
+    </form>
 
 
-        <p id="result"> {{ getInput() }}</p>
-        <br/><br/><br/>
+    <p id="result"> {{ getInput() }}</p>
+    <br/><br/><br/>
     
-    </div>
-
+</div>
 </template>
