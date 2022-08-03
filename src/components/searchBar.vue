@@ -37,7 +37,7 @@ input[type=text] {
     font-size: 24px;
     font-family: ibm plex mono;
     width: 100%;
-    padding: 7px 7px 7px 49px;
+    padding: 7px 10px 7px 49px;
     border-radius: 49px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -52,11 +52,14 @@ form.nosubmit {
     border-radius: 24px;
 }
 input.nosubmit {
-    border: 1px solid #555;
+    border: 1px solid #f9f7df;
     display: flex;
     padding: 9px 4px 9px 40px;
-    background: white url('@/assets/images/magnifying-glass.png') no-repeat;
-    background-size: 20px;
+    background: white url('@/assets/images/magnifying-glass.png') no-repeat 12px 10px;
+    background-size: 28px;
+    border-width: thin;
+    align-items: center;
+    justify-content: center;
 }
 
 .nosubmit-i {
