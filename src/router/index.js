@@ -11,12 +11,23 @@ import { getFirestore } from "firebase/firestore";
 import { getFunctions } from "firebase/functions";
 
 const routes = [
-    { path: '/', name: 'home', component: HomeView },
-    { path: '/home', redirect: '/'},
-    { path: '/about', name: 'about', component: AboutView },
-    { path: '/searchresults/:query', name: 'searchresults', component: SearchResults },
-    { path: '/:catchAll(.*)*', name: '404', component: () => import('../pages/404page.vue')},
-    { path: '/test', name: 'test', component: TestPage },
+    { path: '/',
+        name: 'home', 
+        component: HomeView},
+    { path: '/home',
+        redirect: '/' },
+    { path: '/about',
+        name: 'about',
+        component: AboutView },
+    { path: '/searchresults/:query',
+        name: 'searchresults',
+        component: SearchResults },
+    { path: '/:catchAll(.*)*',
+        name: '404',
+        component: () => import('../pages/404page.vue') },
+    { path: '/test',
+        name: 'test',
+        component: TestPage },
 
 ];
 
@@ -74,10 +85,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(app);
+export const db = getFirestore(app);
 // Initialize Cloud Functions
-const functions = getFunctions(app);
-
-export { db, functions }
+export const functions = getFunctions(app);

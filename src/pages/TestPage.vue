@@ -1,12 +1,15 @@
-<script setup lang="ts">
+<script setup lang="js">
 </script>
 <script>
+
 import { onKeyDown } from '@vueuse/core';
 import { RouterLink } from 'vue-router';
 import cookie from '@/components/cookie.vue'
 import { applyActivation } from '@tensorflow/tfjs-core/dist/ops/fused_util';
 import queryInput from '@/components/queryInput.vue'
 import { useCookies } from 'vue3-cookies';
+import { functions } from '../router/index.js' // this is literally not a valid error, typescript is wrong.
+import { httpsCallable } from 'firebase/functions';
 
 export default {
     data() {
@@ -37,6 +40,13 @@ export default {
                 this.result = "cookie is disabled";
                 console.log(this.result);
             }
+        },
+        callFunction: async function () {
+            const helloWorld = httpsCallable(functions, 'helloWorld');
+            const result = await helloWorld();
+            const data = result.data;
+            
+			console.log(data);
         }
     }
 };
@@ -51,7 +61,7 @@ export default {
         This is the test page's body content.
         <br/><br/><br/>
         
-        <button class="button" v-on:click="testFunction()">click this to test</button>
+        <button class="button" v-on:click="callFunction()">click this to test</button>
         <br/><br/><br/>
         
         <button class="button" v-on:click="seeResults()">click to see results</button>
