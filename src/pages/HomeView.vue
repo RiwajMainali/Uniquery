@@ -11,8 +11,6 @@ window.addEventListener('load', function() {
 <template>
     <main>
         <br /><br />
-        <Results />
-        <br /><br />
         <TheSearchBar />
         <br /><br />
         <Tensorflow />
