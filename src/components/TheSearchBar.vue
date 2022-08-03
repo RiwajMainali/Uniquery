@@ -43,6 +43,9 @@ const addUnicorn = () => {
 	// 	title: addNew.value
 	// }
 	// unicorns.value.unshift(newUnicorn)
+	cors(req, res, () => {
+
+	});
 	
 	addDoc(unicorn_collection_reference, {
 		URL: 'none',
