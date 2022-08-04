@@ -25,11 +25,6 @@ export default {
 </script>
 
 <template>
-
-
-    
-
-
         <div class="container">
             <div class="header">
                 <naviBar />
@@ -44,9 +39,9 @@ export default {
                 </div>
                 
             </div>
+            <br/><br/><br/>
         <!--<div class="footer">
-            A search engine refiner.
-                <UniquerySubtext />
+            a magic search engine.
         </div>-->
         </div>
         
@@ -81,7 +76,10 @@ export default {
         </div>-->
         
     
-    <UniquerySubtext />
+    <div class="footer">
+        a magic search engine.
+    </div>
+    
     <RouterView />
     
     
@@ -139,6 +137,12 @@ body {
 .searchbutton { grid-area: searchbutton; }
 .footer {
     grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
     
 }
 /*@media (min-width: 1024px) {*/
