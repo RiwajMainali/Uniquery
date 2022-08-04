@@ -41,7 +41,7 @@ input[type=text] {
     border-radius: 49px;
     margin: 0 auto;
     box-sizing: border-box;
-    align-items: flex-start;
+    text-indent: 25px;
 }
 
 form.nosubmit {
