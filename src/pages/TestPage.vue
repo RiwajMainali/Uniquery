@@ -9,6 +9,7 @@ import { applyActivation } from '@tensorflow/tfjs-core/dist/ops/fused_util';
 import queryInput from '@/components/queryInput.vue'
 import { useCookies } from 'vue3-cookies';
 import { functions } from '../router/index.js' // this is literally not a valid error, typescript is wrong.
+import { app } from '../router/index.js'
 import { httpsCallable } from 'firebase/functions';
 
 export default {
