@@ -18,7 +18,7 @@ export default {
 <div class="searchBar">
             <form class="nosubmit">
                 
-                <input class="nosubmit" type="text" id="query" autofocus v-on:keyup.enter.prevent="redirectToPage()">
+                <input class="nosubmit" type="text" id="query" autofocus autocomplete="off" v-on:keyup.enter.prevent="redirectToPage()">
             </form>
         </div>
 </template>
@@ -41,6 +41,7 @@ input[type=text] {
     border-radius: 49px;
     margin: 0 auto;
     box-sizing: border-box;
+    align-items: flex-start;
 }
 
 form.nosubmit {
