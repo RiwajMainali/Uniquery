@@ -6,7 +6,7 @@ const functions = require("firebase-functions");
  exports.helloWorld = functions.https.onRequest((request, response) => {
   functions.logger.info("Hello logs!", {structuredData: true});
   response.set('Access-Control-Allow-Origin', '*');
-  response.send({"status" : "success"});
+  response.send({status : "success"});
   
-  return response.status(200).json({"status" : "success"});
+  return response.status(200).json({status : "success"});
 });
