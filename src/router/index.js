@@ -71,7 +71,6 @@ const router = createRouter({
 
 export default router;
 
-
 //Uniquery firebase configuration
 const firebaseConfig = {
 	apiKey: "AIzaSyCdlmhVk0VUoFGix4cM6hhS7UPcNXcQdAU",
@@ -90,3 +89,5 @@ export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 // Initialize Cloud Functions
 export const functions = getFunctions(app);
+
+
