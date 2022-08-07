@@ -44,7 +44,7 @@ export default {
             }
         },
         callFunction: async function () {
-            const helloWorld = httpsCallable(functions, 'helloWorld');
+            const helloWorld = httpsCallable(functions, 'test');
             const result = await helloWorld({data: 'Hellos'});
             const data = result.data;
             
