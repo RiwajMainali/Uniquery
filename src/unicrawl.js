@@ -1,18 +1,10 @@
 // Get Dependencies //
-import { isString } from "@vue/shared";
-import axios from "axios";
-import * as readline from "readline";
+//import { isString } from "@vue/shared";
+//import axios from "axios";
 
-// TEST INPUT //
-const new_readline = readline.createInterface({  
-  input: process.stdin,
-  output: process.stdout
-});
-
-new_readline.question('Enter search query : ', input => {
-  ScapeEnginesAtPage(input, 10);
-});
-// REMOVE ON RELEASE //
+const isString = require("@vue/shared").isString()
+const { MODULEDECLARATION_TYPES, moduleExpression } = require("@babel/types");
+const axios = require("axios")
 
 function GetGoogleResults(input, page_number = 1) {
   // Scrape Google for results
@@ -62,7 +54,36 @@ function GetYandexResults(input, page_number = 1) {
   return 0;
 }
 
-export function ScapeEnginesAtPage(input, page_number = 1) {
+// This function will return a table of strings that contain URLs found by a search. //
+function LinksFromHtml(htmlString, customFilter) {
+
+  // Regex Configuration //
+  let LINK_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
+  let matches = htmlString.match(LINK_REGEX);
+
+  // Filter Configuration //
+  let searchArray = ['google', 'yandex', 'bing', 'w3', 'yastatic']
+  searchArray = searchArray.concat(customFilter)
+  
+  // Filter Results //
+  const texts = matches
+    .filter(element => searchArray.every(
+      substr => !element.includes(substr)
+  ));
+  
+
+  // TEST OUTPUT //
+  //for (const text of texts) {
+  //  console.log(text);
+  //}
+  // REMOVE ON RELEASE //
+
+  return texts;
+}
+
+
+module.exports = {
+  Scrape: function(input, page_number = 1) {
     // Ensure correct input (Returns an error-code)
     if(!isString(input)){
       return 0;
@@ -85,31 +106,5 @@ export function ScapeEnginesAtPage(input, page_number = 1) {
     results_table = results_table.concat(GetYandexResults(input, page_number))
 
     return results_table;
-}
-
-// This function will return a table of strings that contain URLs found by a search. //
-export function LinksFromHtml(htmlString, customFilter) {
-
-  // Regex Configuration //
-  let LINK_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
-  let matches = htmlString.match(LINK_REGEX);
-
-  // Filter Configuration //
-  let searchArray = ['google', 'yandex', 'bing', 'w3', 'yastatic']
-  searchArray = searchArray.concat(customFilter)
-  
-  // Filter Results //
-  const texts = matches
-    .filter(element => searchArray.every(
-      substr => !element.includes(substr)
-  ));
-  
-
-  // TEST OUTPUT //
-  for (const text of texts) {
-    console.log(text);
   }
-  // REMOVE ON RELEASE //
-
-  return matches;
-}
+} 

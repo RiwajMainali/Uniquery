@@ -8,8 +8,10 @@ import cookie from '@/components/cookie.vue'
 import { applyActivation } from '@tensorflow/tfjs-core/dist/ops/fused_util';
 import queryInput from '@/components/queryInput.vue'
 import { useCookies } from 'vue3-cookies';
-import { functions } from '../router/index.js' // this is literally not a valid error, typescript is wrong.
+import { functions } from '../router/index.js'
+import { app } from '../router/index.js'
 import { httpsCallable } from 'firebase/functions';
+import { onMounted } from 'vue';
 
 export default {
     data() {
@@ -42,8 +44,8 @@ export default {
             }
         },
         callFunction: async function () {
-            const helloWorld = httpsCallable(functions, 'helloWorld');
-            const result = await helloWorld();
+            const helloWorld = httpsCallable(functions, 'test');
+            const result = await helloWorld({data: 'Hellos'});
             const data = result.data;
             
 			console.log(data);
