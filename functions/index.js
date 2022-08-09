@@ -36,9 +36,8 @@ const cors = require('cors')({ origin: true });
     return texts;
     })
   } catch(error) {
-    console.log(error)
+    return error;
   }
 
-  return "Loss"
   //return response.status(200).json({status : "success"});
 });
