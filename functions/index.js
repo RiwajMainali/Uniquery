@@ -7,7 +7,7 @@ const axios = require("axios")
 //
  exports.test = functions.https.onCall((data, context) => {
   //const output = unicrawl.ScrapeEnginesAtPage("Test")
-  axios.get('https://www.google.com/search?q=$' + input + "&start=" + (10 * (page_number - 1)), {
+  axios.get('https://www.google.com/search?q=$' + data + "&start=" + (10 * (page_number - 1)), {
     headers:{}
   }).then((response) => {
     // Regex Configuration //
@@ -23,13 +23,6 @@ const axios = require("axios")
       .filter(element => searchArray.every(
         substr => !element.includes(substr)
     ));
-
-
-    // TEST OUTPUT //
-    //for (const text of texts) {
-    //  console.log(text);
-    //}
-    // REMOVE ON RELEASE //
 
     return texts;
   }).catch((error) => {
