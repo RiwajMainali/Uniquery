@@ -1,29 +1,52 @@
 <script>
+import { ref } from 'vue'
+const userQuery = ref([])
+
 export default {
     name: "searchBar",
     data() {
         return {
-            userQuery: '',
+            userQuery: {},
         }
     },
     methods: {
         redirectToPage() {
             window.location.assign('/searchresults')
         },
-    }
+        testFunction() {
+            this.userQuery = returnText();
+        }
+    },
+}
+</script>
+
+<script setup>
+//a test function to check input
+function returnText() {
+    let input = document.getElementById("userQuery").value;
+    //alert(input)
+    return input;
+}
+
+//redirects 
+function redirect() {
+    
+    let newPath = document.getElementById('userQuery').value;
+    window.location.assign('/searchresults/'+newPath);
+    window.sessionStorage.setItem('userInput');
 }
 </script>
 
 <template>
 <div class="searchBar">
-            <form class="nosubmit">
+            <form class="nosubmit" method="get" @submit.prevent="redirect()">
                 
-                <input class="nosubmit" type="text" id="query" autofocus autocomplete="off" v-on:keyup.enter.prevent="redirectToPage()">
+                <input class="nosubmit" type="text" id="userQuery" autofocus autocomplete="off" v-model="userQuery">
             </form>
         </div>
 </template>
 
-<style>
+<style scoped>
 .searchBar {
     width: calc(632px + 6px);
     width: 100%;
@@ -56,11 +79,16 @@ input.nosubmit {
     border: 1px solid #f9f7df;
     display: flex;
     padding: 9px 4px 9px 40px;
-    background: white url('@/assets/images/magnifying-glass.png') no-repeat 12px 10px;
+    background: white url('@/assets/images/magnifying-glass.png') no-repeat 14px 10px;
     background-size: 28px;
     border-width: thin;
     align-items: center;
     justify-content: center;
+}
+
+.button {
+
+    top: 20px;
 }
 
 .nosubmit-i {

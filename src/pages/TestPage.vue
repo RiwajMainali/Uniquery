@@ -4,6 +4,7 @@
 
 import { onKeyDown } from '@vueuse/core';
 import { RouterLink } from 'vue-router';
+import macaron from '@/components/macaron.vue'
 import cookie from '@/components/cookie.vue'
 import { applyActivation } from '@tensorflow/tfjs-core/dist/ops/fused_util';
 import queryInput from '@/components/queryInput.vue'
@@ -22,7 +23,7 @@ export default {
             this.$router.push('/404')
         },
         seeResults() {
-            this.$router.push('/searchresults' + '/' + document.getElementById('query'))
+            this.$router.push('/searchresults' + '/' + window.sessionStorage.getElementById('query'))
         },
         testFunction() {
             window.location.assign('https://project-61dcd.web.app/searchresults')
@@ -48,14 +49,17 @@ export default {
             
 			console.log(data);
         }
+    },
+    components: {
+        macaron,
     }
 };
 </script>
 
 <template>
+    <macaron />
     <div class="testpage">
         <h1>This is the test page's header</h1>
-    
 
     
         This is the test page's body content.

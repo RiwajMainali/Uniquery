@@ -19,7 +19,7 @@ const routes = [
     { path: '/about',
         name: 'about',
         component: AboutView },
-    { path: '/searchresults/:query',
+    { path: '/searchresults/:userQuery',
         name: 'searchresults',
         component: SearchResults },
     { path: '/:catchAll(.*)*',
