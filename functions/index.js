@@ -8,17 +8,22 @@ const cors = require('cors')({ origin: true });
 //
  exports.test = functions.https.onCall((data, context) => {
   //const output = unicrawl.ScrapeEnginesAtPage("Test")
+  try{
+    axios.get('https://www.bing.com/search?q=pizza', {
+      headers : {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    })
+    .then((response) => {
+    console.log("Test 2")
 
-  axios.get('https://www.bing.com/search?q=pizza')
-  .then((response) => {
-    console.log("Test 1")
     // Regex Configuration //
     let LINK_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
     let matches = response.data.match(LINK_REGEX);
 
     // Filter Configuration //
     let searchArray = ['google', 'yandex', 'bing', 'w3', 'yastatic']
-    searchArray = searchArray.concat(customFilter)
+
 
     // Filter Results //
     const texts = matches
@@ -26,10 +31,13 @@ const cors = require('cors')({ origin: true });
         substr => !element.includes(substr)
     ));
 
+    console.log(texts)
+
     return texts;
-  }).catch((error) => {
-    console.log("Test 2")
-  });
+    })
+  } catch(error) {
+    console.log(error)
+  }
 
   return "Loss"
   //return response.status(200).json({status : "success"});
