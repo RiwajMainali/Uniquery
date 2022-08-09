@@ -30,16 +30,17 @@ export default {
     </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
+<style scoped>
+/*@media (min-width: 1024px) {*/
     .result {
         min-height: 100vh;
         /*display: flex;*/
+        justify-content: center;
         align-items: center;
     }
     .result a:link {
         color: blue;
-        font-size: 40px;
+        font-size: 36px;
         font-family: ibm plex mono;
     }
     .result a:hover {
@@ -48,6 +49,6 @@ export default {
     }
 
 /*  scrapedSnip {
-    }*/
-}
+    }
+}*/
 </style>

@@ -25,60 +25,34 @@ export default {
 </script>
 
 <template>
-        <div class="container">
-            <div class="header">
-                <naviBar />
-            </div>
-            <div class="content">
-                <div class="logo">
-                    <Uniquery />
-                </div>
-                <br/><br/><br/>
-                <div class="searchbar">
-                    <searchBar />
-                </div>
-                
-            </div>
-            <br/><br/><br/>
-        <!--<div class="footer">
-            a magic search engine.
-        </div>-->
+    <div class="container">
+
+        <div class="header">
+            <naviBar />
         </div>
-        
-        <!--<br /><br />
-        <TheSearchBar />
-        <br /><br />
-        <div class="container">
-            <div class="toggle">
-                <div class="switch"></div>
-                <div class="icon"></div>
-            </div>
-            <div class="hamburger">
-                <div class="menu"></div>
-            </div>
+
+        <div class="content">
+
             <div class="logo">
                 <Uniquery />
             </div>
-            <div class="search">
-                <div class="searchBar"></div>
-                <div class="searchIcon"></div>
-                <div class="searchInput"></div>
+            <br/><br/><br/>
+
+            <div class="searchbar">
+                <searchBar />
             </div>
-            <div class="searchButton">
-                <div class="button"></div>
-            </div>
-            <div class="header">
-                <div class="navigationBar"></div>
-            </div>
-            <div class="footer">
-                <div class="subtext"></div>
-            </div>
-        </div>-->
+            
+            <div class="searchbutton"></div>
+            
+        </div>
+        <br/><br/><br/>
+
+        <div class="footer">
+            a magic search engine.
+        </div>
         
-    
-    <div class="footer">
-        a magic search engine.
     </div>
+        
     
     <RouterView />
     
@@ -88,6 +62,8 @@ export default {
 <style>
 body {
     background-image: linear-gradient(#ebe3f5, #f6f3e4, #f9f7df);
+    min-height: 100vh;
+    font-family: 'bookish';
 }
 .container {  
     display: grid;
@@ -107,10 +83,10 @@ body {
     align-items: center;
 }
 .content {
-    /*grid-area: content;
+    grid-area: content;
     display: flex;
     flex-direction: column;
-    align-items: center;*/
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -142,8 +118,10 @@ body {
     background: transparent;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: 24px;
-    
+    left: 0;
+    bottom: 0;
 }
 /*@media (min-width: 1024px) {*/
     /*body {
