@@ -8,16 +8,12 @@ const cors = require('cors')({ origin: true });
 //
  exports.test = functions.https.onCall((data, context) => {
   //const output = unicrawl.ScrapeEnginesAtPage("Test")
-  axios.get('https://www.google.com/search?q=$test&start=0')
+
+  return axios.get('https://www.google.com/search?q=$test&start=0')
   .then((response) => {
     console.log("Test 1")
-    return "Success";
   }).catch((error) => {
     console.log("Test 2")
-    return error;
   });
-  
-
-  return "This should not be possible";
   //return response.status(200).json({status : "success"});
 });
