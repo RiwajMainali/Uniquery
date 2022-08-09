@@ -42,6 +42,8 @@ export default {
                 <searchBar />
             </div>
             
+            <div class="searchbutton"></div>
+            
         </div>
         <br/><br/><br/>
 
