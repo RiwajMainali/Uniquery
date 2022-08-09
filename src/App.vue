@@ -23,7 +23,7 @@ export default {
     
 </template>
 
-<style>
+<style scoped>
 @import '@/assets/base.css';
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import '@/index.css';
