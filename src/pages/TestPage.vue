@@ -9,10 +9,11 @@ import cookie from '@/components/cookie.vue'
 import { applyActivation } from '@tensorflow/tfjs-core/dist/ops/fused_util';
 import queryInput from '@/components/queryInput.vue'
 import { useCookies } from 'vue3-cookies';
+
+/// LOOK AT ME KAIA ///
 import { functions } from '../router/index.js'
-import { app } from '../router/index.js'
 import { httpsCallable } from 'firebase/functions';
-import { onMounted } from 'vue';
+/// LOOK AT ME KAIA ///
 
 export default {
     data() {
@@ -44,13 +45,16 @@ export default {
                 console.log(this.result);
             }
         },
+        /// LOOK AT ME KAIA ///
         callFunction: async function () {
-            const helloWorld = httpsCallable(functions, 'test');
-            const result = await helloWorld({data: 'Pizza'});
+            const firebase_function = httpsCallable(functions, 'webcrawl');
+            const result = await firebase_function({data: 'Pizza'});
             const data = result.data;
             
+            // You can use this for testing, otherwise, comment out on release. //
 			console.log(data);
         }
+        /// LOOK AT ME KAIA ///
     },
     components: {
         macaron,

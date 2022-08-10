@@ -28,7 +28,7 @@ async function GetBingResults(input, page_number = 1) {
   // https://www.bing.com/search?q=pizza
   // https://www.bing.com/search?q=test&first=11 will get page 2, https://www.bing.com/search?q=test&first=21 will get page 3.
 
-  return await axios.get('https://www.bing.com/search?q=' + input + '&first=' + (10 * (page_number - 1) + 1), {
+  return await axios.get('https://www.bing.com/search?q=' + input + '&first=' + (10 * (page_number - 1)), {
     headers:{}
   }).then((response) => {
     return LinksFromHtml(response.data);
@@ -95,6 +95,6 @@ async function Scrape(input, page_number = 1) {
 }
 
 
- exports.test = functions.https.onCall(async (input, page_number) => {
+ exports.webcrawl = functions.https.onCall(async (input, page_number) => {
   return await Scrape(input, page_number)
 });
