@@ -1,39 +1,33 @@
 //routers
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../pages/HomeView.vue'
-import AboutView from '../pages/AboutView.vue'
-import SearchResults from '../pages/SearchResults.vue'
-import TestPage from '../pages/TestPage.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../pages/HomeView.vue";
+
+import SearchResults from "../pages/SearchResults.vue";
 
 //cloud firestore
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getFunctions } from "firebase/functions";
 
 const routes = [
-    { path: '/',
-        name: 'home', 
-        component: HomeView},
-    { path: '/home',
-        redirect: '/' },
-    { path: '/about',
-        name: 'about',
-        component: AboutView },
-    { path: '/searchresults/:userQuery',
-        name: 'searchresults',
-        component: SearchResults },
-    { path: '/:catchAll(.*)*',
-        name: '404',
-        component: () => import('../pages/404page.vue') },
-    { path: '/test',
-        name: 'test',
-        component: TestPage },
+  { path: "/", name: "home", component: HomeView },
+  { path: "/home", redirect: "/" },
 
+  {
+    path: "/searchresults/:userQuery",
+    name: "searchresults",
+    component: SearchResults,
+  },
+  {
+    path: "/:catchAll(.*)*",
+    name: "404",
+    component: () => import("../pages/404page.vue"),
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes/*: [
+  routes /*: [
     {
       path: '/',
       name: 'home',
@@ -73,14 +67,14 @@ export default router;
 
 //Uniquery firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyCdlmhVk0VUoFGix4cM6hhS7UPcNXcQdAU",
-	authDomain: "project-61dcd.firebaseapp.com",
-	databaseURL: "https://project-61dcd-default-rtdb.firebaseio.com",
-	projectId: "project-61dcd",
-	storageBucket: "project-61dcd.appspot.com",
-	messagingSenderId: "8277896555",
-	appId: "1:8277896555:web:048508bb2c3c05e10c702e",
-	measurementId: "G-RWQYRW5JEH"
+  apiKey: "AIzaSyCdlmhVk0VUoFGix4cM6hhS7UPcNXcQdAU",
+  authDomain: "project-61dcd.firebaseapp.com",
+  databaseURL: "https://project-61dcd-default-rtdb.firebaseio.com",
+  projectId: "project-61dcd",
+  storageBucket: "project-61dcd.appspot.com",
+  messagingSenderId: "8277896555",
+  appId: "1:8277896555:web:048508bb2c3c05e10c702e",
+  measurementId: "G-RWQYRW5JEH",
 };
 
 // Initialize Firebase
@@ -91,5 +85,3 @@ export const db = getFirestore(app);
 
 // Initialize Cloud Functions
 export const functions = getFunctions(app);
-
-
