@@ -1,5 +1,8 @@
 <script>
 import { ref } from 'vue'
+import { functions } from '../router/index.js'
+import { httpsCallable } from 'firebase/functions';
+
 const userQuery = ref([])
 
 export default {
@@ -29,11 +32,25 @@ function returnText() {
 }
 
 //redirects 
-function redirect() {
+async function redirect() {
     
     let newPath = document.getElementById('userQuery').value;
     window.location.assign('/searchresults/'+newPath);
     window.sessionStorage.setItem('userInput');
+
+    // This is how you access the results, if you want to change it to a scoped variable, feel free. //
+    let results = await callCrawler(document.getElementById('userQuery').value, 1)
+    
+    // You can use this for testing, otherwise, comment out on release. You have to disable the redirects for this to appear in console. //
+    console.log(results);
+}
+
+async function callCrawler(input, page_number) {
+    const firebase_function = httpsCallable(functions, 'webcrawl');
+    const result = await firebase_function(input, page_number);
+    const data = result.data;
+    
+    return data
 }
 </script>
 
