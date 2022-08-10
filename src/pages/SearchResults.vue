@@ -101,7 +101,7 @@ var userQuery = window.sessionStorage.getItem("userInput");
   grid-auto-flow: row;
   position: relative;
   padding: 0 2rem;
-  overflow: scroll;
+
   grid-template-areas:
     "results-header results-header results-header"
     "results-content results-content results-content"
